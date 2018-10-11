@@ -31,10 +31,20 @@ const reducer = (state = initilState, action) => {
     if (action.type === 'STORE_RESULT') {
         return {
             ...state,
-            results: state.results.concat(state.counter)
+            results: state.results.concat({id: new Date(),value: state.counter})
         }
-     
-     
+    }
+    if (action.type === 'DELETE_RESULT') {
+        // let id = action.id;
+        // const newArr = [...state.results];
+        // newArr.splice(id, 1);
+        const updatedArray = state.results.filter((result, index) => {
+            return action.id !== index;
+        })
+        return {
+            ...state,
+            results: updatedArray
+        }
     }
 
 
