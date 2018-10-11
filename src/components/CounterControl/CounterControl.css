@@ -9,9 +9,11 @@
     text-align: center;
     cursor: pointer;
     display: inline-block;
+    outline-color: none;
 }
 
 .CounterControl:hover,
 .CounterControl:active {
     background-color: #eee;
+    outline: none;
 }

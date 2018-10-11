@@ -5,5 +5,11 @@
     font-size: 1.8rem;
     text-align: center;
     padding: 20px 0;
+    outline: none;
     box-sizing: border-box;
+    
+}
+
+.CounterOutput:focus {
+    outline: none;
 }
