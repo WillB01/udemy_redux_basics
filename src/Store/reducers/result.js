@@ -7,7 +7,7 @@ const reducer = (state = initilState, action) => {
     if (action.type === actionTypes.STORE_RESULT) {
         return {
             ...state,
-            results: state.results.concat({id: new Date(),value: state.counter})
+            results: state.results.concat({id: new Date(),value: action.result})
         }
     }
     if (action.type === actionTypes.DELETE_RESULT) {
