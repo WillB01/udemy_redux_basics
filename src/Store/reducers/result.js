@@ -1,10 +1,11 @@
-import * as actionTypes from '../actions';
+import * as actionTypes from '../actions/actionsTypes';
 const initilState = {
     results: []
 }
 
 const reducer = (state = initilState, action) => {
     if (action.type === actionTypes.STORE_RESULT) {
+        
         return {
             ...state,
             results: state.results.concat({id: new Date(),value: action.result})
